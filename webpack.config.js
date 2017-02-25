@@ -1,11 +1,18 @@
+var webpack = require('webpack');
+
 module.exports = {
   devtool: 'inline-source-map',
   entry: ['./client/client.js'],
   output: {
-    path: './dist',
+    path: '/dist',
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
   module: {
     loaders: [
       {
@@ -13,9 +20,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['react', 'es2015']
-        }
+          presets: ['react', 'es2015', 'react-hmre'],
+        },
       }
     ]
-  }
+  },
 };
