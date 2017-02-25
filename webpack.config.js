@@ -2,7 +2,10 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-source-map',
-  entry: ['./client/client.js'],
+  entry: [
+    'webpack-hot-middleware/client',
+    './client/client.js',
+  ],
   output: {
     path: '/dist',
     filename: 'bundle.js',
