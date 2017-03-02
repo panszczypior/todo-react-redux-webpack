@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList';
-import addTodo from '../redux/actions';
+import { addTodo } from '../redux/actions';
 
 class TodoInput extends Component {
 
@@ -32,7 +32,7 @@ class TodoInput extends Component {
     <div>
       <form onSubmit={this.handleSubmit}>
         <input type="text" placeholder="add new todo" value={this.state.inputValue} onChange={this.handleChangeInput} />
-        <input type="submit" text="submit" />
+        <input type="submit" value="submit" />
       </form>
     </div>
     );
