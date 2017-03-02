@@ -30,8 +30,10 @@ class TodoInput extends Component {
   render() {
     return (
     <div>
-      <input type="text" placeholder="add new todo" value={this.state.inputValue} onChange={this.handleChangeInput} />
-      <button onClick={this.handleSubmit}>Submit</button>
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" placeholder="add new todo" value={this.state.inputValue} onChange={this.handleChangeInput} />
+        <input type="submit" text="submit" />
+      </form>
     </div>
     );
   }
