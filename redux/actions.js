@@ -1,8 +1,6 @@
-const addTodo = function(text) {
-    return {
+const addTodo = (text) => ({
       type: 'ADD_TODO',
-      payload: text
-    }
-  }
+      payload: text,
+});
 
 export default addTodo;
