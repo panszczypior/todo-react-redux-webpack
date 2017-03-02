@@ -12,15 +12,11 @@ let initialState = {
   }]
 };
 
-const reduxDevTools = {
-  reduxDevTools: window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-};
-
-const store = configureStore(initialState, reduxDevTools);
+const store = configureStore(initialState);
 
 render(
   <Provider store={store}>
     <App />
-  </Provider> ,
+  </Provider>,
   document.getElementById('app')
 );

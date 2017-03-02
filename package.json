@@ -5,7 +5,7 @@
   "main": "client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js --ignore /components"
+    "serve": "nodemon server/server.js --watch webpack.config.js --watch server/server.js"
   },
   "repository": {
     "type": "git",
