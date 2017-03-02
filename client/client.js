@@ -4,15 +4,8 @@ import { render } from 'react-dom';
 import App from '../components/App';
 import configureStore from '../redux/store';
 
-let initialState = {
-  todos: [{
-    id:0,
-    text: 'hello there',
-    completed: false,
-  }]
-};
 
-const store = configureStore(initialState);
+const store = configureStore();
 
 render(
   <Provider store={store}>

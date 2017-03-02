@@ -1,10 +1,8 @@
-const actions = {
-  addTodo(text){
+const addTodo = function(text) {
     return {
       type: 'ADD_TODO',
-      payload: text,
+      payload: text
     }
   }
-}
 
-export default actions;
+export default addTodo;
