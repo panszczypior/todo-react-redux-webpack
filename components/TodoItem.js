@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { completeTodo, removeTodo } from '../redux/actions';
 
 class TodoItem extends Component {
 
@@ -9,9 +10,11 @@ class TodoItem extends Component {
   }
 
   handleDelete() {
+    this.props.dispatch(removeTodo(this.props.todo.id));
   }
 
   handleComplete() {
+    this.props.dispatch(completeTodo(this.props.todo.id));
   }
 
   render() {
