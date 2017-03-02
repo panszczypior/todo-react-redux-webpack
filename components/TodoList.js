@@ -4,7 +4,7 @@ class TodoList extends Component {
 
   render() {
 
-    const todos = this.props.todos.map(todo => <TodoItem dispatch={this.props.dispatch} key={todo.id} todo={todo} />);
+    const todos = this.props.todos.map(todo => <TodoItem actions={this.props.actions} key={todo.id} todo={todo} />);
     return (
       <ul>
         {todos}

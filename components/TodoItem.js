@@ -10,11 +10,11 @@ class TodoItem extends Component {
   }
 
   handleDelete() {
-    this.props.dispatch(removeTodo(this.props.todo.id));
+    this.props.actions.removeTodo(this.props.todo.id);
   }
 
   handleComplete() {
-    this.props.dispatch(completeTodo(this.props.todo.id));
+    this.props.actions.completeTodo(this.props.todo.id);
   }
 
   render() {
